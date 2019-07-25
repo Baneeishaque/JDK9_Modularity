@@ -2,11 +2,23 @@ description = 'Decoder'
 
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: "org.gradle.java.experimental-jigsaw"
 
-ext.moduleName = 'jdk9_modularity.Decoder'
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.org.gradle.java:experimental-jigsaw:0.1.1"
+  }
+}
+
+javaModule.name = 'jdk9_modularity.Decoder'
+
+mainClassName = 'jdk9_modularity.Decoder.Main'
 
 dependencies {
     implementation project(':Reader')
 }
-
-mainClassName = 'jdk9_modularity.Decoder.Main'

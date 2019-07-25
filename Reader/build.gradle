@@ -1,5 +1,17 @@
 description = 'Reader'
 
-apply plugin: 'java-library'
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.org.gradle.java:experimental-jigsaw:0.1.1"
+  }
+}
 
-ext.moduleName = 'jdk9_modularity.Reader'
+apply plugin: 'java-library'
+apply plugin: "org.gradle.java.experimental-jigsaw"
+
+javaModule.name = 'jdk9_modularity.Reader'
