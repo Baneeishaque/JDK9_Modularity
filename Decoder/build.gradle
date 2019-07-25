@@ -1,0 +1,12 @@
+description = 'Decoder'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+ext.moduleName = 'jdk9_modularity.Decoder'
+
+dependencies {
+    implementation project(':Reader')
+}
+
+mainClassName = 'jdk9_modularity.Decoder.Main'

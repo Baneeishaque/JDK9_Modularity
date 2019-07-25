@@ -1,0 +1,10 @@
+description = 'JDK9 Modularity Demo Work'
+
+allprojects {
+
+    group = 'ndk.demo'
+
+    repositories {
+        jcenter()
+    }
+}

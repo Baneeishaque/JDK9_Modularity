@@ -1,0 +1,5 @@
+rootProject.name = 'JDK9_Modularity'
+
+include ':Decoder'
+include ':Reader'
+

@@ -1,0 +1,5 @@
+description = 'Reader'
+
+apply plugin: 'java-library'
+
+ext.moduleName = 'jdk9_modularity.Reader'
